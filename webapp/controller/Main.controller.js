@@ -8,6 +8,7 @@ sap.ui.define([
 			this.byId("idMap").doMapZoom(oEvent);
 		},
 		oMultiRowSelect: function (oEvent) {
+			sap.ui.getCore().byId("idBusy").open();
 			var oThingObject = oEvent.getParameter("context").getParameters("thing").thingData;
 			this.getOwnerComponent().getRouter().navTo("thingpage", {
 				thingId: oThingObject.ThingId,
