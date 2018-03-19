@@ -13,7 +13,6 @@
 								things="{path:'/Things',parameters:{expand:' HierarchyElements, DYN_ENT_gbs_leonardo_com_itelligencegroup_iot_demo_sensor__TI_SensorTag_CAPPABILITY, DYN_ENT_com_sap_appiot_eventtypes__StandardEventType '}}">
 								<iot:columns>
 									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation1}"/>
-									<iotele:IoTThingListColumnHeader text="{i18n>thingListOnMapInformation3}"/>
 								</iot:columns>
 								<iot:things>
 									<iotele:IoTThingListElement thingImage="{ThingId}" highSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/High}"
@@ -21,7 +20,6 @@
 										mediumSeverity="{DYN_ENT_com_sap_appiot_eventtypes__StandardEventType/Medium}">
 										<iotele:cells>
 											<iotele:IoTThingListColumn text="{ThingName}"/>
-											<iotele:IoTThingListColumn text="{ThingExternalId}"/>
 										</iotele:cells>
 									</iotele:IoTThingListElement>
 								</iot:things>
