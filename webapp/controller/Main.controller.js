@@ -3,5 +3,9 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
 	return Controller.extend("public.controller.Main", {
+		zoomToMap: function (oEvent) {
+			oEvent.getParameters().context = oEvent.getParameter("thing");
+			this.byId("idMap").doMapZoom(oEvent);
+		}
 	});
 });
