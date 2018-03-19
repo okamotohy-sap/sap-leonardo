@@ -24,9 +24,7 @@
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
 				}
-			}
-
-			,
+			},
 			"Thing_Service1": {
 				"uri": "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/gbs.leonardo.com.itelligencegroup.iot.demo.sensor:DE_SS_THINGTYPE01",
 				"type": "OData",
@@ -109,10 +107,7 @@
 						"sap-iot-pst": "gbs.leonardo.com.itelligencegroup.iot.demo.sensor:DE_SS_PROPERTYSET00_Basic,gbs.leonardo.com.itelligencegroup.iot.demo.sensor:Image,gbs.leonardo.com.itelligencegroup.iot.demo.sensor:TI_SensorTag_CAPPABILITY"
 					}
 				}
-
-			}
-
-			,
+			},
 			"thingModel1": {
 				"dataSource": "Thing_Service1",
 				"preload": true,
@@ -123,9 +118,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -136,17 +133,28 @@
 				"controlAggregation": "pages",
 				"controlId": "idAppControl"
 			},
-			"routes": [{
-				"name": "Main",
-				"pattern": "",
-				"target": [
-					"Main"
-				]
-			}],
+			"routes": [
+				{
+					"name": "Main",
+					"pattern": "",
+					"target": [
+						"Main"
+					]
+				},
+				{
+					"pattern": "thingpage/{thingId}/{thingType}/:highSeverity:/:mediumSeverity:/:lowSeverity:",
+					"name": "thingpage",
+					"target": "thingpage"
+				}
+			],
 			"targets": {
 				"Main": {
 					"viewType": "XML",
 					"viewName": "Main"
+				},
+				"thingpage": {
+					"viewType": "XML",
+					"viewName": "ThingPage"
 				}
 			}
 		}
