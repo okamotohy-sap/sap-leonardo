@@ -142,9 +142,11 @@
 					]
 				},
 				{
-					"pattern": "thingpage/{thingId}/{thingType}/:highSeverity:/:mediumSeverity:/:lowSeverity:",
 					"name": "thingpage",
-					"target": "thingpage"
+					"pattern": "thingpage/{thingId}/{thingType}/:highSeverity:/:mediumSeverity:/:lowSeverity:",
+					"target": [
+						"thingpage"
+					]
 				}
 			],
 			"targets": {
