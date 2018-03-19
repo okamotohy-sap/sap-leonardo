@@ -1,6 +1,0 @@
----
-applications:
-- name: myapp
-  host: hayato-test
-  path: myapp
-  memory: 128M
