@@ -6,7 +6,6 @@ sap.ui.define([
 		zoomToMap: function (oEvent) {
 			oEvent.getParameters().context = oEvent.getParameter("thing");
 			this.byId("idMap").doMapZoom(oEvent);
-			/*
 		},
 		oMultiRowSelect: function (oEvent) {
 			sap.ui.getCore().byId("idBusy").open();
@@ -45,12 +44,13 @@ sap.ui.define([
 				headerTitle: oThingObject.ThingName,
 				subHeaderTitle: oThingObject.ThingExternalId
 			});
-		},
-
-		onAfterRendering: function () {
-			sap.ui.getCore().byId("idBusy").close();
-			*/
 		}
+
+		/*
+	onAfterRendering: function () {
+		sap.ui.getCore().byId("idBusy").close();
+	}
+		*/
 
 	});
 });
