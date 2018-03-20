@@ -140,23 +140,12 @@
 					"target": [
 						"Main"
 					]
-				},
-				{
-					"name": "thingpage",
-					"pattern": "thingpage/{thingId}/{thingType}/:highSeverity:/:mediumSeverity:/:lowSeverity:",
-					"target": [
-						"thingpage"
-					]
 				}
 			],
 			"targets": {
 				"Main": {
 					"viewType": "XML",
 					"viewName": "Main"
-				},
-				"thingpage": {
-					"viewType": "XML",
-					"viewName": "ThingPage"
 				}
 			}
 		}
