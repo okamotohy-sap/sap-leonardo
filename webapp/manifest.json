@@ -140,12 +140,23 @@
 					"target": [
 						"Main"
 					]
+				},
+				{
+					"name": "analysispage",
+					"pattern": "analysispage/{thingId}/:navFrom:/:headerTitle:/:subHeaderTitle:/:mpPath:",
+					"target": [
+						"analysispage"
+					]
 				}
 			],
 			"targets": {
 				"Main": {
 					"viewType": "XML",
 					"viewName": "Main"
+				},
+				"thingpage": {
+					"viewType": "XML",
+					"viewName": "ThingPage"
 				}
 			}
 		}
