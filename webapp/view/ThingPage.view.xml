@@ -16,8 +16,10 @@
           </m:Page>
 
     <ObjectPageLayout id="ObjectPageLayout" alwaysShowContentHeader="true">
-        <headerTitle>
-            <Text "hello world">
+        <headerTitle> 
+            <p>
+                "test"
+            </p>
         </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
