@@ -12,8 +12,6 @@
           xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
           controllerName="webapp.controller.ThingPage"
           displayBlock="true">
-          <m:Page title="{i18n>thingpage}" showNavButton="true" navButtonPress="handleNavBackPress">
-          </m:Page>
 
     <ObjectPageHeaderContent>
         <content>
