@@ -8,7 +8,7 @@ sap.ui.define([
 			this.byId("idMap").doMapZoom(oEvent);
 		},
 		oMultiRowSelect: function (oEvent) {
-			sap.ui.getCore().byId("idBusy").open();
+			// sap.ui.getCore().byId("idBusy").open();
 			var oThingObject = oEvent.getParameter("context").getParameters("thing").thingData;
 			this.getOwnerComponent().getRouter().navTo("thingpage", {
 				thingId: oThingObject.ThingId,
@@ -20,12 +20,12 @@ sap.ui.define([
 		},
 
 		oMultiFooterSelect: function (oEvent) {
-			sap.ui.getCore().byId("idBusy").open();
+			// sap.ui.getCore().byId("idBusy").open();
 			this.getOwnerComponent().getRouter().navTo("thinglistpage", false);
 		},
 
 		oSingleHeaderSelect: function (oEvent) {
-			sap.ui.getCore().byId("idBusy").open();
+			// sap.ui.getCore().byId("idBusy").open();
 			var oThingObject = oEvent.getParameter("context").getParameters("thing").thingData;
 			this.getOwnerComponent().getRouter().navTo("thingpage", {
 				thingId: oThingObject.ThingId,
@@ -37,20 +37,18 @@ sap.ui.define([
 		},
 
 		oSingleFooterSelect: function (oEvent) {
-			sap.ui.getCore().byId("idBusy").open();
+			// sap.ui.getCore().byId("idBusy").open();
 			var oThingObject = oEvent.getParameter("context").getParameters("thing").thingData;
 			this.getOwnerComponent().getRouter().navTo("analysispage", {
 				thingId: oThingObject.ThingId,
 				headerTitle: oThingObject.ThingName,
 				subHeaderTitle: oThingObject.ThingExternalId
 			});
-		}
+		},
 
-		/*
-	onAfterRendering: function () {
-		sap.ui.getCore().byId("idBusy").close();
-	}
-		*/
+		onAfterRendering: function () {
+			// sap.ui.getCore().byId("idBusy").close();
+		}
 
 	});
 });
