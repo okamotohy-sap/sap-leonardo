@@ -2,10 +2,10 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"public/model/model"
-], function(UIComponent, Device, models) {
+], function (UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("public.Component", {
+	return UIComponent.extend("webapp.Component", {
 
 		metadata: {
 			manifest: "json"
@@ -16,7 +16,7 @@ sap.ui.define([
 		 * @public
 		 * @override
 		 */
-		init: function() {
+		init: function () {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
 			// set the device model
