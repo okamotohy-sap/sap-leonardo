@@ -10,7 +10,7 @@
           xmlns:viz="sap.viz.ui5.controls"
           xmlns:iotele="sap.ui.iot.elements"
           xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-          controllerName="webapp.controller.ThingPage"
+          controllerName="public.controller.ThingPage"
           displayBlock="true">
           <m:Page title="{i18n>thingpage}" showNavButton="true" navButtonPress="handleNavBackPress">
           </m:Page>
