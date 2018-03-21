@@ -2,7 +2,7 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
 ], function (Controller) {
     "use strict";
-    return Controller.extend("public.controller.ThingPage", {
+    return Controller.extend("webapp.controller.ThingPage", {
 
     });
 });
