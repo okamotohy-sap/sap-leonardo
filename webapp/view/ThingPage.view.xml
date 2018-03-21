@@ -17,10 +17,9 @@
 
     <ObjectPageLayout id="ObjectPageLayout" alwaysShowContentHeader="true">
         <headerTitle> 
-            <p>
-                "test"
-            </p>
-        </headerTitle>
+            <m:Text width="200px"
+					text="Hi, I'm Denise. I am passionate about what I do and I'll go the extra mile to make the customer win."/>       
+             </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
 
