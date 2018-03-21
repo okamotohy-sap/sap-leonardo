@@ -1,6 +1,6 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:iot="sap.ui.iot.controls"
 	xmlns:iotele="sap.ui.iot.elements" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-	controllerName="public.controller.Main" displayBlock="true">
+	controllerName="webapp.controller.Main" displayBlock="true">
 	<App id="idAppControl">
 	<Page title="{i18n>Start Page}" enableScrolling="false">
 		<content>
