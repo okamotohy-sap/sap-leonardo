@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"public/model/model"
+	"webapp/model/model"
 ], function (UIComponent, Device, models) {
 	"use strict";
 
