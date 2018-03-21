@@ -142,10 +142,10 @@
 					]
 				},
 				{
-					"name": "analysispage",
-					"pattern": "analysispage/{thingId}/:navFrom:/:headerTitle:/:subHeaderTitle:/:mpPath:",
+					"pattern": "thingpage/{thingId}/{thingType}/:highSeverity:/:mediumSeverity:/:lowSeverity:",
+					"name": "thingpage",
 					"target": [
-						"analysispage"
+						"thingpage"
 					]
 				}
 			],
