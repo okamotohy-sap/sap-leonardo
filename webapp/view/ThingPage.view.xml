@@ -1,7 +1,6 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:iot="sap.ui.iot.controls" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:suite="sap.suite.ui.commons" xmlns="sap.uxap" xmlns:semantic="sap.m.semantic" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:viz="sap.viz.ui5.controls" xmlns:iotele="sap.ui.iot.elements" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="test_device_sensor.controller.ThingPage" displayBlock="true"><m:Page title="{i18n>thingpage}" showNavButton="true" navButtonPress="handleNavBackPress">
 	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="false" showHeaderContent="true" flexEnabled="true">
 			<headerTitle>
-				<ObjectPageHeader objectTitle="{thingPageModel>/detailsData/ThingName}" objectSubtitle="{thingPageModel>/detailsData/ThingName}" objectImageAlt="{i18n>thing}" id="ObjectPageLayoutHeaderTitle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" showPlaceholder="true"/>
             </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
