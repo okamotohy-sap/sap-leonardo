@@ -15,11 +15,11 @@
           <m:Page title="{i18n>thingpage}" showNavButton="true" navButtonPress="handleNavBackPress">
           </m:Page>
 
-    <ObjectPageLayout id="ObjectPageLayout" alwaysShowContentHeader="true">
-        <headerTitle> 
+    <ObjectPageHeaderContent>
+        <content>
             <m:Text width="200px"
 					text="Hi, I'm Denise. I am passionate about what I do and I'll go the extra mile to make the customer win."/>       
-             </headerTitle>
-    </ObjectPageLayout>
+        </content>
+    </ObjectPageHeaderContent>
 </mvc:View>
 
