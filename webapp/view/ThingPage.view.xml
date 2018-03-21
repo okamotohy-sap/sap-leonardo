@@ -16,7 +16,9 @@
     <ObjectPageHeaderContent>
         <content>
             <m:Text width="200px"
-					text="Hi, I'm Denise. I am passionate about what I do and I'll go the extra mile to make the customer win."/>       
+					text="here is table 1"/>       
+            <m:Text width="200px"
+					text="here is table 2"/>       
         </content>
     </ObjectPageHeaderContent>
 </mvc:View>
