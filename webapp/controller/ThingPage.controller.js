@@ -22,6 +22,8 @@ sap.ui.define([
   				iMediumSeverity: arg.mediumSeverity,
   				iLowSeverity: arg.lowSeverity
   			};
+      }
+        /**
   			var oDetailsThingModel = this._findThingModel(sThingType);
   			if (oDetailsThingModel) {
   				this._readDetailsService(oDetailsThingModel, this.sThingId);
@@ -30,8 +32,6 @@ sap.ui.define([
   				var oNewThingTypeModel = new sap.ui.model.odata.ODataModel(sURL);
   				this._readDetailsService(oNewThingTypeModel, this.sThingId);
   			}
-      }
-        /**
   			//Render the Measured Values Control
   			var oContext = {
   				ThingId: this.sThingId,
