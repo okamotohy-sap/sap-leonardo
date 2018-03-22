@@ -35,8 +35,8 @@ sap.ui.define([
         ThingId: this.sThingId,
         ThingType: sThingType
       };
-      /**
       this.byId("idMeasuringPoints").doReload(oContext);
+      /**
       //Call the events service for rendering timeline and eventList control
 
       this._readEventsService(this.sThingId);
