@@ -15,7 +15,7 @@
 		showNavButton="true"
 		navButtonPress="onNavBack"
 		class="sapUiResponsiveContentPadding">
-		<content>
+		<m:ontent>
         <!--
 			<List id="employeeList" headerText="{i18n>ThingPage}" items="{/Employees}">
 				<items>
@@ -26,7 +26,7 @@
 				</items>
 			</List>
             -->
-		</content>
+		</m:content>
 	</m:Page>
 </mvc:View>
 
