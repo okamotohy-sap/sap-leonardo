@@ -67,6 +67,6 @@ sap.ui.define([
             //this.getRouter().navTo("Main", {}, true);
             window.history.go(-1)
         }
-        *//
+        **/
     });
 });
