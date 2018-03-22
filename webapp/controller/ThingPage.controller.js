@@ -202,8 +202,8 @@ sap.ui.define([
       }
     });
   },
-/**
   settingsModel : {
+  /**
     chartType : {
       name : "Chart Type",
       defaultSelected : "3",
@@ -971,8 +971,8 @@ sap.ui.define([
         }
       }]
     }
+  **/
   }
-**/
 
 
   /**
