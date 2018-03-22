@@ -11,10 +11,8 @@ sap.ui.define([
   			this.getView().setModel(oModel, "thingPageModel");
   			oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
   		},
-      _onRouteMatched: function(oEvent) {}
       /**
   		/** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
-      /**
   		_onRouteMatched: function(oEvent) {
   			var arg = oEvent.getParameter("arguments");
   			this.sThingId = arg.thingId;
@@ -32,6 +30,8 @@ sap.ui.define([
   				var oNewThingTypeModel = new sap.ui.model.odata.ODataModel(sURL);
   				this._readDetailsService(oNewThingTypeModel, this.sThingId);
   			}
+      }
+        /**
   			//Render the Measured Values Control
   			var oContext = {
   				ThingId: this.sThingId,
