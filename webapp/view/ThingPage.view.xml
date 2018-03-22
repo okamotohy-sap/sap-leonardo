@@ -17,6 +17,8 @@
 		class="sapUiResponsiveContentPadding">
 		<m:content>
         <m:Text text="{thingPageModel>/detailsData/ThingName}" />
+        <m:Text text="{thingPageModel>/detailsData/ThingName}" />
+        <m:Text text="{thingPageModel>/detailsData}" />
         <!--
 			<List id="employeeList" headerText="{i18n>ThingPage}" items="{/Employees}">
 				<items>
