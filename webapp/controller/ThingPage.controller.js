@@ -43,8 +43,8 @@ sap.ui.define([
   			if (this.byId("idSemanticBarHBox").getDomRef()) {
   				this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
   			}
-  		}
-      **/,
+  		},
+      **/
         onNavBack: function (oEvent) {
             //this.getRouter().navTo("Main", {}, true);
             window.history.go(-1)
