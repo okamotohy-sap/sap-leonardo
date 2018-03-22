@@ -202,7 +202,7 @@ sap.ui.define([
       }
     });
   },
-
+/**
   settingsModel : {
     chartType : {
       name : "Chart Type",
@@ -972,7 +972,7 @@ sap.ui.define([
       }]
     }
   }
-
+**/
 
 
   /**
