@@ -11,9 +11,9 @@
           xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
           controllerName="webapp.controller.ThingPage"
           displayBlock="true">
-<ObjectPageLayout id="ObjectPageLayout">
+    <ObjectPageLayout id="ObjectPageLayout">
         <headerTitle>
-            <ObjectPageHeader objectTitle="i18n>thingpage" >        
+            <ObjectPageHeader objectTitle="{i18n>thingpage}" />
         </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
