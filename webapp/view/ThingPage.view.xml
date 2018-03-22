@@ -32,5 +32,5 @@
         </content>
       </Panel>
     </layout:fixContent>
-
+</layout:FixFlex>
   </mvc:View>
