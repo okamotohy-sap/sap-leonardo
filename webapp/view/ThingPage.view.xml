@@ -23,9 +23,9 @@
               <m:Label text = '{/chartType/name}' design="Bold" class='settingsLabel'></Label>
               <m:Select id='chartTypeSelect' class='settingsSelect' selectedKey='{/chartType/defaultSelected}' maxWidth="150px" change='onChartTypeChanged'
                 items="{path: '/chartType/values'}">
-                <m:items>
+                <items>
                   <m:core:Item text="{name}" key="{key}" />
-                </m:items>
+                </items>
               </m:Select>
             </m:VBox>
           </m:HBox>
