@@ -20,6 +20,6 @@
                         text="here is table 2"/>       
             </content>
         </ObjectPageHeaderContent>
-    <ObjectPageLayout>
+    </ObjectPageLayout>
 </mvc:View>
 
