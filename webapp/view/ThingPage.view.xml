@@ -2,8 +2,10 @@
   xmlns:html="http://www.w3.org/1999/xhtml"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns:iot="sap.ui.iot.controls"
-  xmlns:m="sap.m" xmlns:core="sap.ui.core"
-  xmlns:suite="sap.suite.ui.commons" xmlns="sap.uxap"
+  xmlns:m="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:suite="sap.suite.ui.commons"
+  xmlns="sap.uxap"
   xmlns:semantic="sap.m.semantic"
   xmlns:layout="sap.ui.layout"
   xmlns:f="sap.ui.layout.form"
@@ -24,7 +26,7 @@
               <m:Select id='chartTypeSelect' class='settingsSelect' selectedKey='{/chartType/defaultSelected}' maxWidth="150px" change='onChartTypeChanged'
                 items="{path: '/chartType/values'}">
                 <items>
-                  <m:core:Item text="{name}" key="{key}" />
+                  <core:Item text="{name}" key="{key}" />
                 </items>
               </m:Select>
             </m:VBox>
