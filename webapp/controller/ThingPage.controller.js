@@ -1,7 +1,9 @@
 sap.ui.define([
   "sap/ui/core/mvc/Controller",
   "sap/ui/core/routing/History",
-  'sap/ui/model/json/JSONModel'
+  'sap/ui/model/json/JSONModel',
+  'sap/viz/ui5/format/ChartFormatter',
+
 ], function (Controller, formatter) {
   "use strict";
   return Controller.extend("webapp.controller.ThingPage", {
