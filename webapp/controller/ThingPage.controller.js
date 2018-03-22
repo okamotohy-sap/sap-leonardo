@@ -44,6 +44,86 @@ sap.ui.define([
         this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
       }
     },
+    _renderSemanticBar: function(urgent, important, information) {
+      var oHeaderImage = this.byId("ObjectPageLayoutHeaderTitle").getAggregation("_objectImage");
+      if (!oHeaderImage) {
+        oHeaderImage = {};
+        oHeaderImage.aCustomStyleClasses = [];
+      }
+      for (var i = 0; i <= oHeaderImage.aCustomStyleClasses.length; i++) {
+        oHeaderImage.aCustomStyleClasses.pop();
+      }
+      if (urgent > 0) {
+        $(".objectPageHeaderImage").css({
+          'border-left-color': '#bb0000',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".headerImage").css({
+          'border-left-color': '#bb0000',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem',
+          'color': 'white'
+        });
+        $(".objectSematicBar").css({
+          'background-color': '#bb0000',
+          'margin': '0rem'
+        });
+        //$(".sapUxAPObjectPageHeaderIdentifier .sapUxAPObjectPageHeaderObjectImageForce .sapUxAPObjectPageHeaderStickied .sapUxAPObjectPageHeaderObjectImage").css({'border-left-color': 'red', 'border-left-style': 'solid', 'border-left-width': '.5rem'});
+        oHeaderImage.aCustomStyleClasses.push("thingPageRedSematic");
+      } else if (important > 0) {
+        $(".objectPageHeaderImage").css({
+          'border-left-color': '#e78c07',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".headerImage").css({
+          'border-left-color': '#e78c07',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".objectSematicBar").css({
+          'background-color': '#e78c07',
+          'margin': '0rem'
+        });
+        oHeaderImage.aCustomStyleClasses.push("thingPageOrangeSematic");
+      } else if (information > 0) {
+        $(".objectPageHeaderImage").css({
+          'border-left-color': '#2b7d2b',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".headerImage").css({
+          'border-left-color': '#2b7d2b',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".objectSematicBar").css({
+          'background-color': '#2b7d2b',
+          'margin': '0rem'
+        });
+        oHeaderImage.aCustomStyleClasses.push("thingPageGreenSematic");
+      } else {
+        $(".objectPageHeaderImage").css({
+          'border-left-color': '#d3d7d9',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".headerImage").css({
+          'border-left-color': '#d3d7d9',
+          'border-left-style': 'solid',
+          'border-left-width': '.5rem'
+        });
+        $(".objectSematicBar").css({
+          'background-color': '#d3d7d9',
+          'margin': '0rem'
+        });
+        oHeaderImage.aCustomStyleClasses.push("thingPageGreySematic");
+      }
+      oHeaderImage.aCustomStyleClasses.push("sapUxAPObjectPageHeaderObjectImage");
+
+    },
+
     _findThingModel: function(sThingType) {
       //Create a loop and just check how many thingModels are created and break if there is no thingModel
       for (var i = 1; i < 100; i++) {
