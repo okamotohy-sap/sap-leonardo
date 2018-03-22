@@ -30,7 +30,6 @@ sap.ui.define([
         var oNewThingTypeModel = new sap.ui.model.odata.ODataModel(sURL);
         this._readDetailsService(oNewThingTypeModel, this.sThingId);
       }
-      /**
       //Render the Measured Values Control
       var oContext = {
         ThingId: this.sThingId,
@@ -39,7 +38,7 @@ sap.ui.define([
       this.byId("idMeasuringPoints").doReload(oContext);
       //Call the events service for rendering timeline and eventList control
       this._readEventsService(this.sThingId);
-
+      /**
       this.getView().getModel("thingPageModel").setProperty("/severity", oSeverity);
       if (this.byId("idSemanticBarHBox").getDomRef()) {
         this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
