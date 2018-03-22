@@ -11,7 +11,7 @@
           xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
           controllerName="webapp.controller.ThingPage"
           displayBlock="true">
-<Page id="ThingPage" title="{i18n>ThingPage}"
+<m:Page id="ThingPage" title="{i18n>ThingPage}"
 		showNavButton="true"
 		navButtonPress="onNavBack"
 		class="sapUiResponsiveContentPadding">
@@ -27,6 +27,6 @@
 			</List>
             -->
 		</content>
-	</Page>
+	</m:Page>
 </mvc:View>
 
