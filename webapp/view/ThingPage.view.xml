@@ -12,14 +12,11 @@
           controllerName="webapp.controller.ThingPage"
           displayBlock="true">
 <ObjectPageLayout id="ObjectPageLayout">
+        <headerTitle>
         <ObjectPageHeaderContent>
-            <content>
-                <m:Text width="200px"
-                        text="here is table 1"/>       
-                <m:Text width="200px"
-                        text="here is table 2"/>       
-            </content>
-        </ObjectPageHeaderContent>
+                <m:Text width="200px" text="here is table 1"/>       
+                <m:Text width="200px" text="here is table 2"/>       
+        </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
 
