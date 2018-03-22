@@ -10,7 +10,7 @@ sap.ui.define([
   			var oModel = new sap.ui.model.json.JSONModel();
   			this.getView().setModel(oModel, "thingPageModel");
   			oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
-  		},
+  		}
   		/** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
       /**
   		_onRouteMatched: function(oEvent) {
@@ -44,10 +44,10 @@ sap.ui.define([
   				this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
   			}
   		},
-      **/
         onNavBack: function (oEvent) {
             //this.getRouter().navTo("Main", {}, true);
             window.history.go(-1)
         }
+        **/
     });
 });
