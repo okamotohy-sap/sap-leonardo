@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller, formatter) {
     "use strict";
     return Controller.extend("webapp.controller.ThingPage", {
-      formatter: formatter,
+      formatter: formatter
       /**
   		onInit: function() {
   			var oRouter = this.getOwnerComponent().getRouter();
