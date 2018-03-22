@@ -194,7 +194,7 @@ sap.ui.define([
           jQuery.sap.log.error(oError);
         }
       });
-    }
+    },
 
     settingsModel : {
         chartType : {
