@@ -30,6 +30,7 @@ sap.ui.define([
         var oNewThingTypeModel = new sap.ui.model.odata.ODataModel(sURL);
         this._readDetailsService(oNewThingTypeModel, this.sThingId);
       }
+      /**
       //Render the Measured Values Control
       var oContext = {
         ThingId: this.sThingId,
@@ -43,7 +44,9 @@ sap.ui.define([
       if (this.byId("idSemanticBarHBox").getDomRef()) {
         this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
       }
+      **/
     },
+
     _renderSemanticBar: function(urgent, important, information) {
       var oHeaderImage = this.byId("ObjectPageLayoutHeaderTitle").getAggregation("_objectImage");
       if (!oHeaderImage) {
@@ -142,6 +145,7 @@ sap.ui.define([
         }
       }
     },
+
     _readDetailsService: function(oDetailsModel, sThingId) {
       var that = this;
       oDetailsModel.read("/Things('" + sThingId + "')", {
@@ -161,11 +165,13 @@ sap.ui.define([
         }
       });
     },
+
     onImageLoadError: function() {
       this.byId("ObjectPageLayout").getHeaderTitle().setObjectImageURI("sap-icon://machine");
       this.byId("idHeaderImage").setVisible(false);
       this.byId("idHeaderIcon").setVisible(true);
     },
+
     _readEventsService: function(sThingId) {
       var that = this;
       this.byId("idEventList").setThingId(sThingId);
