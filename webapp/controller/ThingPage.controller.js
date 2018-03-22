@@ -22,8 +22,6 @@ sap.ui.define([
   				iMediumSeverity: arg.mediumSeverity,
   				iLowSeverity: arg.lowSeverity
   			};
-      }
-        /**
   			var oDetailsThingModel = this._findThingModel(sThingType);
   			if (oDetailsThingModel) {
   				this._readDetailsService(oDetailsThingModel, this.sThingId);
@@ -46,10 +44,29 @@ sap.ui.define([
   				this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
   			}
   		},
+      _findThingModel: function(sThingType) {
+      //Create a loop and just check how many thingModels are created and break if there is no thingModel
+      for (var i = 1; i < 100; i++) {
+        if (this.getOwnerComponent().getModel("thingModel" + i)) {
+          //Compare the thingType with the thingModel thingtype , if it matches then return that thingModel
+          var sServiceURL = this.getOwnerComponent().getModel("thingModel" + i).sServiceUrl;
+          var matchedThingType = sServiceURL.substring(sServiceURL.lastIndexOf("/") + 1);
+          if (sThingType === matchedThingType) {
+            return this.getOwnerComponent().getModel("thingModel" + i);
+          }
+        } else {
+          jQuery.sap.log.error(
+            "The thingType has not matched with the ThingModel created in the Manifest file , hence need to create a new oData Model for this thingType"
+          );
+          break;
+        }
+      }
+    }
+  /**
         onNavBack: function (oEvent) {
             //this.getRouter().navTo("Main", {}, true);
             window.history.go(-1)
         }
-        **/
+        *//
     });
 });
