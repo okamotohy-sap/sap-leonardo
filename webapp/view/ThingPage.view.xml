@@ -13,22 +13,11 @@
           displayBlock="true">
     <ObjectPageLayout id="ObjectPageLayout">
         <headerTitle>
-            <ObjectPageHeader objectTitle="{i18n>thingpage}" />
-            	<MessagePage
-		title="{i18n>NotFound}"
-		text="{i18n>NotFound.text}"
-		description="{i18n>NotFound.description}"
-		showNavButton="true"
-		navButtonPress="onNavBack"/>
-        </headerTitle>
-
-        <MessagePage
-            title="{i18n>NotFound}"
-            text="{i18n>NotFound.text}"
-            description="{i18n>NotFound.description}"
+            <ObjectPageHeader 
+            objectTitle="{i18n>thingpage}"
             showNavButton="true"
-            navButtonPress="onNavBack"/>
-
+		    navButtonPress="onNavBack"/>
+/>        </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
 
