@@ -11,13 +11,22 @@
           xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
           controllerName="webapp.controller.ThingPage"
           displayBlock="true">
-    <ObjectPageLayout id="ObjectPageLayout">
-        <headerTitle>
-            <MessagePage 
-            objectTitle="{i18n>thingpage}"
-            showNavButton="true"
-		    navButtonPress="onNavBack"/>
-/>        </headerTitle>
-    </ObjectPageLayout>
+<Page id="ThingPage" title="{i18n>ThingPage}"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+		class="sapUiResponsiveContentPadding">
+		<content>
+        <!--
+			<List id="employeeList" headerText="{i18n>ThingPage}" items="{/Employees}">
+				<items>
+					<StandardListItem
+						title="{FirstName} {LastName}"
+						iconDensityAware="false"
+						iconInset="false"/>
+				</items>
+			</List>
+            -->
+		</content>
+	</Page>
 </mvc:View>
 
