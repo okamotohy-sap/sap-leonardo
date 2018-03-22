@@ -3,7 +3,7 @@ sap.ui.define([
   "sap/ui/core/routing/History",
   'sap/ui/model/json/JSONModel',
   'sap/viz/ui5/format/ChartFormatter'
-], function (Controller, formatter) {
+], function (Controller, formatter, jQuery, JSONModel, FlattenedDataset, FeedItem, ChartFormatter, Format, InitPageUtil) {
   "use strict";
   return Controller.extend("webapp.controller.ThingPage", {
     formatter: formatter,
