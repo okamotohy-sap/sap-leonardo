@@ -15,7 +15,7 @@
 		showNavButton="true"
 		navButtonPress="onNavBack"
 		class="sapUiResponsiveContentPadding">
-		<m:ontent>
+		<m:content>
         <!--
 			<List id="employeeList" headerText="{i18n>ThingPage}" items="{/Employees}">
 				<items>
