@@ -1,4 +1,3 @@
-
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" 
           xmlns:mvc="sap.ui.core.mvc"
           xmlns:iot="sap.ui.iot.controls"
@@ -12,14 +11,15 @@
           xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
           controllerName="webapp.controller.ThingPage"
           displayBlock="true">
-
-    <ObjectPageHeaderContent>
-        <content>
-            <m:Text width="200px"
-					text="here is table 1"/>       
-            <m:Text width="200px"
-					text="here is table 2"/>       
-        </content>
-    </ObjectPageHeaderContent>
+<ObjectPageLayout id="ObjectPageLayout">
+        <ObjectPageHeaderContent>
+            <content>
+                <m:Text width="200px"
+                        text="here is table 1"/>       
+                <m:Text width="200px"
+                        text="here is table 2"/>       
+            </content>
+        </ObjectPageHeaderContent>
+    <ObjectPageLayout>
 </mvc:View>
 
