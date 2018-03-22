@@ -14,7 +14,21 @@
     <ObjectPageLayout id="ObjectPageLayout">
         <headerTitle>
             <ObjectPageHeader objectTitle="{i18n>thingpage}" />
+            	<MessagePage
+		title="{i18n>NotFound}"
+		text="{i18n>NotFound.text}"
+		description="{i18n>NotFound.description}"
+		showNavButton="true"
+		navButtonPress="onNavBack"/>
         </headerTitle>
+
+        <MessagePage
+            title="{i18n>NotFound}"
+            text="{i18n>NotFound.text}"
+            description="{i18n>NotFound.description}"
+            showNavButton="true"
+            navButtonPress="onNavBack"/>
+
     </ObjectPageLayout>
 </mvc:View>
 
