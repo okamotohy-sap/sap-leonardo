@@ -8,8 +8,7 @@ sap.ui.define([
             return sap.ui.core.UIComponent.getRouterFor(this);
         },
         onNavBack: function (oEvent) {
-            this.getRouter().navTo("Main", {
-            });
+            this.getRouter().navTo("Main", {}, true);
 
         }
     });
