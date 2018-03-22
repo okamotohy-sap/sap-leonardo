@@ -8,14 +8,9 @@ sap.ui.define([
             return sap.ui.core.UIComponent.getRouterFor(this);
         },
         onNavBack: function (oEvent) {
-            var oHistory, sPreviousHash;
-            oHistory = History.getInstance();
-            sPreviousHash = oHistory.getPreviousHash();
-            if (sPreviousHash !== undefined) {
-                window.history.go(-1);
-            } else {
-                this.getRouter().navTo("Main", {}, true /*no history*/);
-            }
+            this.getRouter().navTo("Main", {
+            });
+
         }
     });
 });
