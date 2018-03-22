@@ -1,50 +1,50 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/routing/History"
+  "sap/ui/core/mvc/Controller",
+  "sap/ui/core/routing/History"
 ], function (Controller, formatter) {
-    "use strict";
-    return Controller.extend("webapp.controller.ThingPage", {
-      formatter: formatter,
-  		onInit: function() {
-  			var oRouter = this.getOwnerComponent().getRouter();
-  			var oModel = new sap.ui.model.json.JSONModel();
-  			this.getView().setModel(oModel, "thingPageModel");
-  			oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
-  		},
-      /**
-  		/** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
-  		_onRouteMatched: function(oEvent) {
-  			var arg = oEvent.getParameter("arguments");
-  			this.sThingId = arg.thingId;
-  			var sThingType = arg.thingType;
-  			var oSeverity = {
-  				iHighSeverity: arg.highSeverity,
-  				iMediumSeverity: arg.mediumSeverity,
-  				iLowSeverity: arg.lowSeverity
-  			};
-  			var oDetailsThingModel = this._findThingModel(sThingType);
-  			if (oDetailsThingModel) {
-  				this._readDetailsService(oDetailsThingModel, this.sThingId);
-  			} else {
-  				var sURL = "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/" + sThingType;
-  				var oNewThingTypeModel = new sap.ui.model.odata.ODataModel(sURL);
-  				this._readDetailsService(oNewThingTypeModel, this.sThingId);
-  			}
-  			//Render the Measured Values Control
-  			var oContext = {
-  				ThingId: this.sThingId,
-  				ThingType: sThingType
-  			};
-  			this.byId("idMeasuringPoints").doReload(oContext);
-  			//Call the events service for rendering timeline and eventList control
-  			this._readEventsService(this.sThingId);
+  "use strict";
+  return Controller.extend("webapp.controller.ThingPage", {
+    formatter: formatter,
+    onInit: function() {
+      var oRouter = this.getOwnerComponent().getRouter();
+      var oModel = new sap.ui.model.json.JSONModel();
+      this.getView().setModel(oModel, "thingPageModel");
+      oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
+    },
+    /**
+    /** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
+    _onRouteMatched: function(oEvent) {
+      var arg = oEvent.getParameter("arguments");
+      this.sThingId = arg.thingId;
+      var sThingType = arg.thingType;
+      var oSeverity = {
+        iHighSeverity: arg.highSeverity,
+        iMediumSeverity: arg.mediumSeverity,
+        iLowSeverity: arg.lowSeverity
+      };
+      var oDetailsThingModel = this._findThingModel(sThingType);
+      if (oDetailsThingModel) {
+        this._readDetailsService(oDetailsThingModel, this.sThingId);
+      } else {
+        var sURL = "/IOTAS-DETAILS-THING-ODATA/CompositeThings/ThingType/v1/" + sThingType;
+        var oNewThingTypeModel = new sap.ui.model.odata.ODataModel(sURL);
+        this._readDetailsService(oNewThingTypeModel, this.sThingId);
+      }
+      //Render the Measured Values Control
+      var oContext = {
+        ThingId: this.sThingId,
+        ThingType: sThingType
+      };
+      this.byId("idMeasuringPoints").doReload(oContext);
+      //Call the events service for rendering timeline and eventList control
+      this._readEventsService(this.sThingId);
 
-  			this.getView().getModel("thingPageModel").setProperty("/severity", oSeverity);
-  			if (this.byId("idSemanticBarHBox").getDomRef()) {
-  				this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
-  			}
-  		},
-      _findThingModel: function(sThingType) {
+      this.getView().getModel("thingPageModel").setProperty("/severity", oSeverity);
+      if (this.byId("idSemanticBarHBox").getDomRef()) {
+        this._renderSemanticBar(oSeverity.iHighSeverity, oSeverity.iMediumSeverity, oSeverity.iLowSeverity);
+      }
+    },
+    _findThingModel: function(sThingType) {
       //Create a loop and just check how many thingModels are created and break if there is no thingModel
       for (var i = 1; i < 100; i++) {
         if (this.getOwnerComponent().getModel("thingModel" + i)) {
@@ -61,12 +61,59 @@ sap.ui.define([
           break;
         }
       }
-    }
-  /**
-        onNavBack: function (oEvent) {
-            //this.getRouter().navTo("Main", {}, true);
-            window.history.go(-1)
+    },
+    _readDetailsService: function(oDetailsModel, sThingId) {
+      var that = this;
+      oDetailsModel.read("/Things('" + sThingId + "')", {
+        urlParameters: {
+          "$expand": "DYN_ENT_gbs_leonardo_com_itelligencegroup_iot_demo_sensor__Image,DYN_ENT_gbs_leonardo_com_itelligencegroup_iot_demo_sensor__TI_SensorTag_CAPPABILITY"
+        },
+        success: function(oData) {
+          that.getView().getModel("thingPageModel").setProperty("/detailsData", oData);
+          var oThingImage = that.byId("idHeaderImage");
+          oThingImage.attachError(that.onImageLoadError, that);
+          oThingImage.setSrc("/backend-image/things/" + that.sThingId);
+          sap.ui.getCore().byId("idBusy").close();
+        },
+        error: function(oError) {
+          jQuery.sap.log.error(oError);
+          sap.ui.getCore().byId("idBusy").close();
         }
-        **/
-    });
+      });
+    },
+    onImageLoadError: function() {
+      this.byId("ObjectPageLayout").getHeaderTitle().setObjectImageURI("sap-icon://machine");
+      this.byId("idHeaderImage").setVisible(false);
+      this.byId("idHeaderIcon").setVisible(true);
+    },
+    _readEventsService: function(sThingId) {
+      var that = this;
+      this.byId("idEventList").setThingId(sThingId);
+      this.byId("idEventList").doReloadControl = true;
+      var oEventsModel = this.getOwnerComponent().getModel("events");
+      var oFilter = new sap.ui.model.Filter("ThingId", sap.ui.model.FilterOperator.EQ, sThingId);
+      var oSorter = new sap.ui.model.Sorter("BusinessTimestamp", true); // sort descending
+      oEventsModel.read("/Events", {
+        filters: [oFilter],
+        sorters: [oSorter],
+        urlParameters: {
+          "$top": "6",
+          "$skip": "0"
+        },
+        success: function(oData) {
+          that.getView().getModel("thingPageModel").setProperty("/eventsData", oData.results);
+        },
+        error: function(oError) {
+          jQuery.sap.log.error(oError);
+        }
+      });
+    }
+
+    /**
+    onNavBack: function (oEvent) {
+    //this.getRouter().navTo("Main", {}, true);
+    window.history.go(-1)
+  }
+  **/
+});
 });
