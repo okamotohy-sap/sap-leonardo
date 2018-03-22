@@ -289,7 +289,7 @@ sap.ui.define([
                         window: {
                             start: "firstDataPoint",
                             end: "lastDataPoint"
-                        },
+                        }
                     },
                     valueAxis: {
                         label: {
@@ -335,7 +335,7 @@ sap.ui.define([
                         window: {
                             start: "firstDataPoint",
                             end: "lastDataPoint"
-                        },
+                        }
                     },
                     valueAxis: {
                         label: {
@@ -496,7 +496,7 @@ sap.ui.define([
                         }
                     },
                     title: {
-                        visible: false,
+                        visible: false
                     }
 
                 }
@@ -734,7 +734,7 @@ sap.ui.define([
                         dataLabel: {
                             formatString:ChartFormatter.DefaultPattern.SHORTFLOAT_MFD2,
                             visible: false
-                        },
+                        }
                     },
                     valueAxis: {
                         visible: true,
@@ -801,7 +801,7 @@ sap.ui.define([
                         dataLabel: {
                             formatString:ChartFormatter.DefaultPattern.SHORTFLOAT_MFD2,
                             visible: false
-                        },
+                        }
                     },
                     valueAxis: {
                         visible: true,
@@ -865,7 +865,7 @@ sap.ui.define([
                         dataLabel: {
                             formatString:ChartFormatter.DefaultPattern.SHORTFLOAT_MFD2,
                             visible: false
-                        },
+                        }
                     },
                     valueAxis: {
                         visible: true,
@@ -965,7 +965,7 @@ sap.ui.define([
                 }
             }]
         }
-    },
+    }
 
 
 
