@@ -15,6 +15,9 @@
 		showNavButton="true"
 		navButtonPress="onNavBack"
 		class="sapUiResponsiveContentPadding">
+    <headerTitle>
+      <ObjectPageHeader objectTitle="{thingPageModel>/detailsData/ThingName}" objectSubtitle="{thingPageModel>/detailsData/ThingName}" objectImageAlt="{i18n>thing}" id="ObjectPageLayoutHeaderTitle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" showPlaceholder="true"/>
+    </headerTitle>
 		<m:content>
         <m:Text text="{thingPageModel>/detailsData/ThingName}" />
         <m:Text text="{thingPageModel>/detailsData/ThingName}" />
