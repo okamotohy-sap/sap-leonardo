@@ -203,7 +203,6 @@ sap.ui.define([
     });
   },
   settingsModel : {
-  /**
     chartType : {
       name : "Chart Type",
       defaultSelected : "3",
@@ -266,7 +265,8 @@ sap.ui.define([
             visible: false
           }
         }
-      },{
+      }/**
+      ,{
         key : "1",
         name : "Column Chart",
         vizType : "timeseries_column",
@@ -971,8 +971,8 @@ sap.ui.define([
         }
       }]
     }
-  **/
-  }
+    *//
+  }}
 
 
   /**
