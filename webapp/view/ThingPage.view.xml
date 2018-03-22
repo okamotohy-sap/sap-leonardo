@@ -13,9 +13,7 @@
           displayBlock="true">
 <ObjectPageLayout id="ObjectPageLayout">
         <headerTitle>
-        <ObjectPageHeaderContent>
-                <m:Text width="200px" text="here is table 1"/>       
-                <m:Text width="200px" text="here is table 2"/>       
+            <ObjectPageHeader objectTitle="i18n>thingpage" >        
         </headerTitle>
     </ObjectPageLayout>
 </mvc:View>
