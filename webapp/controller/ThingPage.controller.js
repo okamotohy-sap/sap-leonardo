@@ -7,10 +7,9 @@ sap.ui.define([
   'sap/viz/ui5/data/FlattenedDataset',
   'sap/viz/ui5/controls/common/feeds/FeedItem',
   'sap/viz/ui5/format/ChartFormatter',
-  'sap/viz/ui5/api/env/Format',
-  './InitPage'
+  'sap/viz/ui5/api/env/Format'
 
-], function (Controller, formatter, jQuery, JSONModel, FlattenedDataset, FeedItem, ChartFormatter, Format, InitPageUtil) {
+], function (Controller, formatter, jQuery, JSONModel, FlattenedDataset, FeedItem, ChartFormatter, Format) {
   "use strict";
   return Controller.extend("webapp.controller.ThingPage", {
     formatter: formatter,
