@@ -4,8 +4,8 @@ sap.ui.define([
 ], function (Controller, formatter) {
     "use strict";
     return Controller.extend("webapp.controller.ThingPage", {
-      /**
       formatter: formatter,
+      /**
   		onInit: function() {
   			var oRouter = this.getOwnerComponent().getRouter();
   			var oModel = new sap.ui.model.json.JSONModel();
