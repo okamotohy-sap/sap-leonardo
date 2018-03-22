@@ -4,14 +4,14 @@ sap.ui.define([
 ], function (Controller, formatter) {
     "use strict";
     return Controller.extend("webapp.controller.ThingPage", {
-      formatter: formatter
+      formatter: formatter,
   		onInit: function() {
   			var oRouter = this.getOwnerComponent().getRouter();
   			var oModel = new sap.ui.model.json.JSONModel();
   			this.getView().setModel(oModel, "thingPageModel");
-  			//oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
+  			oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
   		},
-      //_onRouteMatched: function(oEvent) {}
+      _onRouteMatched: function(oEvent) {}
       /**
   		/** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
       /**
