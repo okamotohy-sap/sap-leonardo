@@ -7,9 +7,10 @@ sap.ui.define([
   'sap/viz/ui5/data/FlattenedDataset',
   'sap/viz/ui5/controls/common/feeds/FeedItem',
   'sap/viz/ui5/format/ChartFormatter',
-  'sap/viz/ui5/api/env/Format'
+  'sap/viz/ui5/api/env/Format',
+  "sap/ui/iot/elements/IoTEventsOnChartElement"
 
-], function (Controller, formatter, jQuery, JSONModel, FlattenedDataset, FeedItem, ChartFormatter, Format) {
+], function (Controller, formatter, jQuery, JSONModel, FlattenedDataset, FeedItem, ChartFormatter, Format, IoTEventsOnChart) {
   "use strict";
   return Controller.extend("webapp.controller.ThingPage", {
     formatter: formatter,
@@ -18,11 +19,13 @@ sap.ui.define([
       var oModel = new sap.ui.model.json.JSONModel();
       this.getView().setModel(oModel, "thingPageModel");
       oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
+      this.byId("idChart").setModel(oModel, "chartModel");
     },
     /**
     /** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
     _onRouteMatched: function(oEvent) {
       var arg = oEvent.getParameter("arguments");
+
       this.sThingId = arg.thingId;
       var sThingType = arg.thingType;
       var oSeverity = {
@@ -43,6 +46,12 @@ sap.ui.define([
         ThingId: this.sThingId,
         ThingType: sThingType
       };
+
+      var sHeaderTitle = arg.headerTitle;
+      var sSubHeaderTitle = arg.subHeaderTitle;
+
+
+
       /**
       this.byId("idMeasuringPoints").doReload(oContext);
       //Call the events service for rendering timeline and eventList control
