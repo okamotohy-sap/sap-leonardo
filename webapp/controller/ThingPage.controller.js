@@ -53,9 +53,20 @@ sap.ui.define([
       var oChart = this.byId("idChart");
     	// oChart.setHeaderTitle(sHeaderTitle);
     	// oChart.setSubheaderTitle(sSubHeaderTitle);
-
+      /*
       var oMpContext = oEvent.getParameter("context");
       var oModel = this.getView().getModel("thingPageModel");
+      */
+
+      this.aPath = arg.Property.split(".");
+      this.oChart.addDefaultPST(this.aPath[0], this.aPath[1]);
+      //Bug because the new value wont reflect
+      this.oChart.bChartInit = true;
+      this.oChart.bReload = false;
+      this._renderChart();
+    },
+
+
       /**
       oModel.setProperty("/mpData", oMpContext);
       var oProperty = oMpContext.getObject(oMpContext.getPath()).measuredValue;
@@ -232,6 +243,18 @@ sap.ui.define([
     });
   },
 
+
+  _renderChart: function() {
+    // Workaround as of now because onAfterRendering does not get called for the second time
+    if (!this.bRenderChart) {
+      this.oChart.setEventsVisible(false);
+      this.oChart.setAssetId(this.sThingId);
+      //the chart is not getting rendered ,hence we rerender it
+      this.oChart.rerender();
+    }
+  },
+
+  /*
   _renderChart: function(oChart, sThingId) {
     // Workaround as of now because onAfterRendering does not get called for the second time
     if (!this.bRenderChart) {
@@ -239,6 +262,7 @@ sap.ui.define([
       oChart.setAssetId(sThingId);
     }
   }
+  */
 
 /**
 onNavBack: function (oEvent) {
