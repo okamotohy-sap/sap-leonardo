@@ -18,6 +18,7 @@
   <Page title="Page" enableScrolling="false">
 		<content>
       <Text text="{thingPageModel>/detailsData/ThingName}" />
+       <iot:IoTChart id="idChart" noOfHours="24" isSliderVisible="true"/>
 		</content>
 	</Page>
 </mvc:View>
