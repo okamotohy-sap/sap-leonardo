@@ -52,6 +52,7 @@ sap.ui.define([
       var sSubHeaderTitle = arg.subHeaderTitle;
       var oChart = this.byId("idChart");
 
+      /*
       oChart.setHeaderTitle("");
       oChart.setSubheaderTitle("");
       this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
@@ -61,7 +62,7 @@ sap.ui.define([
       oChart.bNavFromMeasuredValue = false;
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
-
+      */
 
       // oChart.setHeaderTitle(sHeaderTitle);
       // oChart.setSubheaderTitle(sSubHeaderTitle);
