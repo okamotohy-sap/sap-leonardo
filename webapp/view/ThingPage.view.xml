@@ -19,7 +19,7 @@
     <content>
       <!--<Text text="{thingPageModel>/detailsData/ThingName}" />-->
       <!--<Text text="{thingPageModel>/detailsData}" />-->
-      <iot:IoTChart id="__tchart2">
+      <iot:IoTChart id="idChart">
         <iot:propertySetTypes>
           <iotele:IoTPropertySetTypeElement propertySetTypeName="“TI_SensorTag_CAPPABILITY">
             <iotele:measures>
