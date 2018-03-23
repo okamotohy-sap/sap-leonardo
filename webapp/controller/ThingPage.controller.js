@@ -15,7 +15,7 @@ sap.ui.define([
   return Controller.extend("webapp.controller.ThingPage", {
     formatter: formatter,
     onInit: function() {
-      this.bRenderChart = true;  
+      this.bRenderChart = true;
       var oRouter = this.getOwnerComponent().getRouter();
       var oModel = new sap.ui.model.json.JSONModel();
       this.getView().setModel(oModel, "thingPageModel");
@@ -25,6 +25,7 @@ sap.ui.define([
     /**
     /** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
     _onRouteMatched: function(oEvent) {
+      sap.ui.getCore().byId("idBusy").close();
       var arg = oEvent.getParameter("arguments");
 
       this.sThingId = arg.thingId;
