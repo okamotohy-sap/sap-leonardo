@@ -21,7 +21,7 @@
       <!--<Text text="{thingPageModel>/detailsData}" />-->
       <iot:IoTChart id="idChart">
         <iot:propertySetTypes>
-          <iotele:IoTPropertySetTypeElement propertySetTypeName="gbs.leonardo.com.itelligencegroup.iot.demo.sensor:TI_SensorTag_CAPPABILITY">
+          <iotele:IoTPropertySetTypeElement propertySetTypeName="TI_SensorTag_CAPPABILITY">
             <iotele:measures>
               <iotele:IoTPropertyElement propertyName="sensorAccX"/>
             </iotele:measures>
