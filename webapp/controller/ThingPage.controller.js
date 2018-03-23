@@ -15,23 +15,19 @@ sap.ui.define([
   return Controller.extend("webapp.controller.ThingPage", {
     formatter: formatter,
     onInit: function() {
-        /*
       this.bRenderChart = true;
 			this.bNavMp = false;
-      */
       var oRouter = this.getOwnerComponent().getRouter();
       var oModel = new sap.ui.model.json.JSONModel();
       this.getView().setModel(oModel, "thingPageModel");
       oRouter.getRoute("thingpage").attachMatched(this._onRouteMatched, this);
-      /*
       var oModel2 = new sap.ui.model.json.JSONModel();
       this.byId("idChart").setModel(oModel2, "chartModel");
-      */
     },
     /**
     /** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
     _onRouteMatched: function(oEvent) {
-      /*
+      /* これをいれるとThingPageに進まなくなる。
       sap.ui.getCore().byId("idBusy").close();
       */
       var arg = oEvent.getParameter("arguments");
