@@ -55,6 +55,7 @@ sap.ui.define([
     	// oChart.setSubheaderTitle(sSubHeaderTitle);
 
       var oMpContext = oEvent.getParameter("context");
+      var oModel = this.getView().getModel("thingPageModel");
       oModel.setProperty("/mpData", oMpContext);
       var oProperty = oMpContext.getObject(oMpContext.getPath()).measuredValue;
 
