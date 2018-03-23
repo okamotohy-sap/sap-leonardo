@@ -287,8 +287,9 @@ sap.ui.define([
       var oData = eventsContext.getModel().getProperty(eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
       eventsArr.push(oData);
       oChart.getModel("chartModel").setData(eventsArr);
-      var aMPPath = oData.Property.split("/");
-      oChart.addDefaultPST(aMPPath[1], aMPPath[2]);
+      // var aMPPath = oData.Property.split("/");
+      /// oChart.addDefaultPST(aMPPath[1], aMPPath[2]);
+      oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
       var oTemplate = new IoTEventsOnChart({
         businessTimeStamp: "{chartModel>BusinessTimestamp}",
         severity: "{chartModel>Severity}",
