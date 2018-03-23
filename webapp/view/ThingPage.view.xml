@@ -19,15 +19,7 @@
     <content>
       <!--<Text text="{thingPageModel>/detailsData/ThingName}" />-->
       <!--<Text text="{thingPageModel>/detailsData}" />-->
-      <iot:IoTChart id="idChart">
-        <iot:propertySetTypes>
-          <iotele:IoTPropertySetTypeElement propertySetTypeName="TI_SensorTag_CAPPABILITY">
-            <iotele:measures>
-              <iotele:IoTPropertyElement propertyName="sensorAccX"/>
-            </iotele:measures>
-          </iotele:IoTPropertySetTypeElement>
-        </iot:propertySetTypes>
-      </iot:IoTChart>
+      <iot:IoTChart id="idChart" noOfHours="24" isSliderVisible="true"/>
       <!--<iot:IoTChart id="idChart" noOfHours="24" isSliderVisible="true"/>-->
     </content>
   </Page>
