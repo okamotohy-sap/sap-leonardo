@@ -74,12 +74,12 @@ sap.ui.define([
       //ここまではうまく行った
 
       var oEventContext = oEvent.getParameter("event");
-      var oModel = this.getView().getModel("thingPageModel");
+      var oModel3 = this.getView().getModel("thingPageModel");
       oModel.setProperty("/eventsData", oEventContext);
-      sap.ui.getCore().setModel(oModel, "eventsModel");
+      sap.ui.getCore().setModel(oModel3, "eventsModel");
       this.eventsContext = sap.ui.getCore().getModel("eventsModel") && sap.ui.getCore().getModel("eventsModel").getData().eventsData;
       //this._renderEventsOnChart(oChart, this.eventsContext);
-      this._renderEventsOnChart(oChart,  oEvent.getParameter("event"));
+      this._renderEventsOnChart(oChart, this.eventsContext);
 
 
       //this._renderChart();
