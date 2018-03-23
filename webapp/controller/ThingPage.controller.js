@@ -60,7 +60,8 @@ sap.ui.define([
       this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
       */
       oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
-      this._renderChart();
+      this._renderChart(oChart, this.sThingId);
+      //this._renderChart();
       /*
       oChart.bChartInit = true;
       oChart.bReload = false;
@@ -263,7 +264,15 @@ sap.ui.define([
     });
   },
 
+  _renderChart: function(oChart, sThingId) {
+    // Workaround as of now because onAfterRendering does not get called for the second time
+    if (!this.bRenderChart) {
+      oChart.setEventsVisible(false);
+      oChart.setAssetId(sThingId);
+    }
+  },
 
+/*
   _renderChart: function() {
     // Workaround as of now because onAfterRendering does not get called for the second time
     if (!this.bRenderChart) {
@@ -273,6 +282,7 @@ sap.ui.define([
       this.oChart.rerender();
     }
   },
+  */
 
   /*
   _renderChart: function(oChart, sThingId) {
