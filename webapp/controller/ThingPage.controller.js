@@ -59,7 +59,8 @@ sap.ui.define([
 
       oChart.setHeaderTitle("");
       oChart.setSubheaderTitle("");
-      this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
+      //this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
+      this a.Path = oProperty;
       oChart.addDefaultPST(this.aPath[0], this.aPath[1]);
       oChart.bChartInit = true;
       oChart.bReload = false;
