@@ -212,25 +212,6 @@ sap.ui.define([
     });
   },
 
-  createContent: function(oController) {
-    var oPage = new sap.ui.iot.controls.IoTChart({
-      thingId :"<thingId>";
-      id : "idChart";
-      noOfHours :"24";
-      isSliderVisible :true;
-      events : [
-      new sap.ui.iot.elements.IoTEventsOnChartElement({
-      eventStatus :"<status string>"
-      eventProperty :"<property String>"
-      eventDescription :"<description string>"
-      eventId :"<eventId string>"
-      businessTimeStamp :"<date Object>"
-      severity :"1<integer>"
-      })
-      ]
-    });
-
-    }
 
 
 /**
