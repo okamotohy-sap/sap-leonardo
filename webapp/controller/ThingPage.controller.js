@@ -78,7 +78,8 @@ sap.ui.define([
       oModel.setProperty("/eventsData", oEventContext);
       sap.ui.getCore().setModel(oModel, "eventsModel");
       this.eventsContext = sap.ui.getCore().getModel("eventsModel") && sap.ui.getCore().getModel("eventsModel").getData().eventsData;
-      this._renderEventsOnChart(oChart, this.eventsContext);
+      //this._renderEventsOnChart(oChart, this.eventsContext);
+      this._renderEventsOnChart(oChart, this.oEventContext);
 
 
       //this._renderChart();
