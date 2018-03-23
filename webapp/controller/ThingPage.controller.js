@@ -58,7 +58,7 @@ sap.ui.define([
       var oModel = this.getView().getModel("thingPageModel");
       */
 
-      this.getView().setModel(oViewModel,"arg");
+      this.getView().setModel(arg,"arg");
 
       //this.aPath = arg.Property.split(".");
       //this.oChart.addDefaultPST(this.aPath[0], this.aPath[1]);
