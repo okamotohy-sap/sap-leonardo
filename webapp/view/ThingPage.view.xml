@@ -16,10 +16,19 @@
   displayBlock="true">
 
   <Page title="Page" enableScrolling="false">
-		<content>
+    <content>
       <!--<Text text="{thingPageModel>/detailsData/ThingName}" />-->
-      <Text text="{thingPageModel>/detailsData}" />
+      <!--<Text text="{thingPageModel>/detailsData}" />-->
+      <iot:IoTChart id="__tchart2">
+        <iot:propertySetTypes>
+          <iotele:IoTPropertySetTypeElement propertySetTypeName="“TI_SensorTag_CAPPABILITY">
+            <iotele:measures>
+              <iotele:IoTPropertyElement propertyName="sensorAccX"/>
+            </iotele:measures>
+          </iotele:IoTPropertySetTypeElement>
+        </iot:propertySetTypes>
+      </iot:IoTChart>
       <!--<iot:IoTChart id="idChart" noOfHours="24" isSliderVisible="true"/>-->
-		</content>
-	</Page>
+    </content>
+  </Page>
 </mvc:View>
