@@ -58,10 +58,10 @@ sap.ui.define([
       oChart.addDefaultPST(this.aPath[0], this.aPath[1]);
       oChart.bChartInit = true;
       oChart.bReload = false;
-      oChart.bNavFromMeasuredValue = true;
+      oChart.bNavFromMeasuredValue = false;
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
-      
+
 
       // oChart.setHeaderTitle(sHeaderTitle);
       // oChart.setSubheaderTitle(sSubHeaderTitle);
