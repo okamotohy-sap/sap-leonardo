@@ -59,6 +59,7 @@ sap.ui.define([
       oModel.setProperty("/mpData", oMpContext);
       var oProperty = oMpContext.getObject(oMpContext.getPath()).measuredValue;
 
+      /**
       oChart.setHeaderTitle("");
       oChart.setSubheaderTitle("");
       //this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
@@ -69,6 +70,7 @@ sap.ui.define([
       oChart.bNavFromMeasuredValue = true;
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
+      **/
 
       /**
       this.byId("idMeasuringPoints").doReload(oContext);
