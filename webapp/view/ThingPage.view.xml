@@ -17,7 +17,7 @@
 
   <Page title="Page" enableScrolling="false">
 		<content>
-      <Text text="<thingId>" />
+      <Text text="{thingPageModel>/detailsData/ThingName}" />
 		</content>
 	</Page>
 </mvc:View>
