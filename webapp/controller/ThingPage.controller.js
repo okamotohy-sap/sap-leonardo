@@ -79,8 +79,35 @@ sap.ui.define([
       sap.ui.getCore().setModel(oModel3, "eventsModel");
       this.eventsContext = sap.ui.getCore().getModel("eventsModel") && sap.ui.getCore().getModel("eventsModel").getData().eventsData;
       //this._renderEventsOnChart(oChart, this.eventsContext);
-      this._renderEventsOnChart(oChart, this.eventsContext);
+      // this._renderEventsOnChart(oChart, this.eventsContext);
 
+
+      oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
+      var oTemplate = new IoTEventsOnChart({
+        businessTimeStamp: "{chartModel>BusinessTimestamp}",
+        severity: "{chartModel>Severity}",
+        eventId: "{chartModel>EventId}",
+        eventDescription: "{chartModel>Description}",
+        eventProperty: "{chartModel>Property}",
+        eventStatus: "{chartModel>Status}"
+      });
+      oChart.bindAggregation("events", "chartModel>/", oTemplate);
+
+      oChart.setEventsVisible(true);
+      var eventsArr = [];
+      var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
+      eventsArr.push(oData);
+      oChart.getModel("chartModel").setData(eventsArr);
+      oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
+      var oTemplate = new IoTEventsOnChart({
+        businessTimeStamp: "{chartModel>BusinessTimestamp}",
+        severity: "{chartModel>Severity}",
+        eventId: "{chartModel>EventId}",
+        eventDescription: "{chartModel>Description}",
+        eventProperty: "{chartModel>Property}",
+        eventStatus: "{chartModel>Status}"
+      });
+      oChart.bindAggregation("events", "chartModel>/", oTemplate);
 
       //this._renderChart();
       /*
