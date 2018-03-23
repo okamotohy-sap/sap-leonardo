@@ -47,9 +47,10 @@ sap.ui.define([
         ThingType: sThingType
       };
 
+      /*
       var sHeaderTitle = arg.headerTitle;
       var sSubHeaderTitle = arg.subHeaderTitle;
-
+      */
 
 
       /**
