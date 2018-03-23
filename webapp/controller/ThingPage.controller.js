@@ -51,8 +51,8 @@ sap.ui.define([
       var sHeaderTitle = arg.headerTitle;
       var sSubHeaderTitle = arg.subHeaderTitle;
       var oChart = this.byId("idChart");
-    	// oChart.setHeaderTitle(sHeaderTitle);
-    	// oChart.setSubheaderTitle(sSubHeaderTitle);
+      // oChart.setHeaderTitle(sHeaderTitle);
+      // oChart.setSubheaderTitle(sSubHeaderTitle);
       /*
       var oMpContext = oEvent.getParameter("context");
       var oModel = this.getView().getModel("thingPageModel");
@@ -64,7 +64,6 @@ sap.ui.define([
       this.oChart.bChartInit = true;
       this.oChart.bReload = false;
       this._renderChart();
-    },
 
 
       /**
@@ -256,13 +255,13 @@ sap.ui.define([
 
   /*
   _renderChart: function(oChart, sThingId) {
-    // Workaround as of now because onAfterRendering does not get called for the second time
-    if (!this.bRenderChart) {
-      oChart.setEventsVisible(false);
-      oChart.setAssetId(sThingId);
-    }
-  }
-  */
+  // Workaround as of now because onAfterRendering does not get called for the second time
+  if (!this.bRenderChart) {
+  oChart.setEventsVisible(false);
+  oChart.setAssetId(sThingId);
+}
+}
+*/
 
 /**
 onNavBack: function (oEvent) {
