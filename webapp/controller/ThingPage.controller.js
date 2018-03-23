@@ -86,6 +86,7 @@ sap.ui.define([
       var eventsArr = [];
       var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
       eventsArr.push(oData);
+        /*
       oChart.getModel("chartModel").setData(eventsArr);
       oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
       var oTemplate = new IoTEventsOnChart({
@@ -97,7 +98,7 @@ sap.ui.define([
         eventStatus: "{chartModel>Status}"
       });
       oChart.bindAggregation("events", "chartModel>/", oTemplate);
-
+      */
       //this._renderChart();
       /*
       oChart.bChartInit = true;
