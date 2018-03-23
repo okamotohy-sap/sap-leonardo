@@ -60,11 +60,12 @@ sap.ui.define([
 
       this.aPath = arg.Property.split(".");
       this.oChart.addDefaultPST(this.aPath[0], this.aPath[1]);
+      /*
       //Bug because the new value wont reflect
       this.oChart.bChartInit = true;
       this.oChart.bReload = false;
       this._renderChart();
-
+      */
 
       /**
       oModel.setProperty("/mpData", oMpContext);
