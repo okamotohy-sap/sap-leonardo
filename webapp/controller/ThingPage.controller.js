@@ -48,12 +48,24 @@ sap.ui.define([
       };
 
 
-      //var sHeaderTitle = arg.headerTitle;
-      //var sSubHeaderTitle = arg.subHeaderTitle;
-      // var oChart = this.byId("idChart");
-    	//oChart.setHeaderTitle(sHeaderTitle);
-    	//oChart.setSubheaderTitle(sSubHeaderTitle);
+      var sHeaderTitle = arg.headerTitle;
+      var sSubHeaderTitle = arg.subHeaderTitle;
+      var oChart = this.byId("idChart");
+    	// oChart.setHeaderTitle(sHeaderTitle);
+    	// oChart.setSubheaderTitle(sSubHeaderTitle);
 
+      var oMpContext = oEvent.getParameter("context");
+      var oProperty = oMpContext.getObject(oMpContext.getPath()).measuredValue;
+
+      oChart.setHeaderTitle("");
+      oChart.setSubheaderTitle("");
+      this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
+      oChart.addDefaultPST(this.aPath[0], this.aPath[1]);
+      oChart.bChartInit = true;
+      oChart.bReload = false;
+      oChart.bNavFromMeasuredValue = true;
+      oChart.bNavFromEventList = false;
+      this._renderChart(oChart, this.sThingId);
 
       /**
       this.byId("idMeasuringPoints").doReload(oContext);
@@ -215,7 +227,13 @@ sap.ui.define([
     });
   },
 
-
+  _renderChart: function(oChart, sThingId) {
+    // Workaround as of now because onAfterRendering does not get called for the second time
+    if (!this.bRenderChart) {
+      oChart.setEventsVisible(false);
+      oChart.setAssetId(sThingId);
+    }
+  }
 
 /**
 onNavBack: function (oEvent) {
