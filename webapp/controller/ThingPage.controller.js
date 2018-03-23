@@ -81,8 +81,8 @@ sap.ui.define([
       //this._renderEventsOnChart(oChart, this.eventsContext);
       // this._renderEventsOnChart(oChart, this.eventsContext);
 
-      /*
       oChart.setEventsVisible(true);
+      /*
       var eventsArr = [];
       var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
       eventsArr.push(oData);
