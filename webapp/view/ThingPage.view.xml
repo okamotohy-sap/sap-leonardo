@@ -17,12 +17,7 @@
 
   <Page title="Page" enableScrolling="false">
 		<content>
-			<iot:IoTChart thingId = "<thingId>" id="idChart" noOfHours="24" isSliderVisible="true">
-			<events>
-			<iotele:IoTEventsOnChartElement eventStatus="<status string>" eventProperty="<property String>" eventDescription="<description string>"
-								eventId="<eventId string>" businessTimeStamp="<date Object>" severity="1<integer>"/>
-			</events>
-			</iot:IoTChart>
+      <Text text="<thingId>" />
 		</content>
 	</Page>
 </mvc:View>
