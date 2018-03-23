@@ -16,6 +16,7 @@ sap.ui.define([
     formatter: formatter,
     onInit: function() {
       this.bRenderChart = true;
+			this.bNavMp = false;
       var oRouter = this.getOwnerComponent().getRouter();
       var oModel = new sap.ui.model.json.JSONModel();
       this.getView().setModel(oModel, "thingPageModel");
@@ -66,6 +67,8 @@ sap.ui.define([
       oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
       oChart.bChartInit = true;
       oChart.bReload = false;
+      oChart.bNavFromMeasuredValue = true;
+      oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
       //this._renderChart();
       /*
