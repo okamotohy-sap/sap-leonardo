@@ -15,8 +15,10 @@ sap.ui.define([
   return Controller.extend("webapp.controller.ThingPage", {
     formatter: formatter,
     onInit: function() {
+        /*
       this.bRenderChart = true;
 			this.bNavMp = false;
+      */
       var oRouter = this.getOwnerComponent().getRouter();
       var oModel = new sap.ui.model.json.JSONModel();
       this.getView().setModel(oModel, "thingPageModel");
