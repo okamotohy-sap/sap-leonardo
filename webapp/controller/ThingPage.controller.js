@@ -31,7 +31,9 @@ sap.ui.define([
     /**
     /** Retreive the ThingId and ThingType and do a call to the backend with the expand paramaters to bind it to the header and basic data section **/
     _onRouteMatched: function(oEvent) {
+      /*
       sap.ui.getCore().byId("idBusy").close();
+      */
       var arg = oEvent.getParameter("arguments");
 
       this.sThingId = arg.thingId;
