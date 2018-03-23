@@ -69,9 +69,7 @@ sap.ui.define([
       oChart.bReload = true;
       oChart.bNavFromMeasuredValue = true;
       oChart.bNavFromEventList = false;
-      /*
       this._renderChart(oChart, this.sThingId);
-      /*
       //this._renderChart();
       /*
       oChart.bChartInit = true;
