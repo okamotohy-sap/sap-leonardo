@@ -70,6 +70,13 @@ sap.ui.define([
       oChart.bNavFromMeasuredValue = true;
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
+
+      //ここまではうまく行った
+
+      this.eventsContext = sap.ui.getCore().getModel("eventsModel") && sap.ui.getCore().getModel("eventsModel").getData().eventsData;
+      this._renderEventsOnChart(oChart, this.eventsContext);
+
+
       //this._renderChart();
       /*
       oChart.bChartInit = true;
@@ -271,6 +278,31 @@ sap.ui.define([
         jQuery.sap.log.error(oError);
       }
     });
+  },
+
+  _renderEventsOnChart: function(oChart, eventsContext) {
+    oChart.setEventsVisible(true);
+    var eventsArr = [];
+    if (eventsContext && eventsContext.getPath) {
+      var oData = eventsContext.getModel().getProperty(eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
+      eventsArr.push(oData);
+      oChart.getModel("chartModel").setData(eventsArr);
+      var aMPPath = oData.Property.split("/");
+      oChart.addDefaultPST(aMPPath[1], aMPPath[2]);
+      var oTemplate = new IoTEventsOnChart({
+        businessTimeStamp: "{chartModel>BusinessTimestamp}",
+        severity: "{chartModel>Severity}",
+        eventId: "{chartModel>EventId}",
+        eventDescription: "{chartModel>Description}",
+        eventProperty: "{chartModel>Property}",
+        eventStatus: "{chartModel>Status}"
+      });
+      oChart.bindAggregation("events", "chartModel>/", oTemplate);
+    }
+    if (!this.bRenderChart) {
+      oChart.setAssetId(this.sThingId);
+    }
+
   },
 
   _renderChart: function(oChart, sThingId) {
