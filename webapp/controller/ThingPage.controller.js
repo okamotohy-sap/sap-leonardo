@@ -205,10 +205,10 @@ sap.ui.define([
 
   createContent: function(oController) {
     var oPage = new sap.ui.iot.controls.IoTChart({
-      thingId :"<thingId>"
-      id : "idChart"
-      noOfHours :"24"
-      isSliderVisible :true,
+      thingId :"<thingId>";
+      id : "idChart";
+      noOfHours :"24";
+      isSliderVisible :true;
       events : [
       new sap.ui.iot.elements.IoTEventsOnChartElement({
       eventStatus :"<status string>"
