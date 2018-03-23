@@ -82,9 +82,9 @@ sap.ui.define([
       // this._renderEventsOnChart(oChart, this.eventsContext);
 
       oChart.setEventsVisible(true);
-      /*
       var eventsArr = [];
       var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
+      /*
       eventsArr.push(oData);
       oChart.getModel("chartModel").setData(eventsArr);
       oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
