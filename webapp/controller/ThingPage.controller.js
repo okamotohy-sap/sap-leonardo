@@ -47,7 +47,11 @@ sap.ui.define([
         ThingType: sThingType
       };
 
-      /*
+
+      var oChart = this.byId("idChart");
+    			oChart.setHeaderTitle(sHeaderTitle);
+    			oChart.setSubheaderTitle(sSubHeaderTitle);
+                /*
       var sHeaderTitle = arg.headerTitle;
       var sSubHeaderTitle = arg.subHeaderTitle;
       */
