@@ -50,7 +50,7 @@ sap.ui.define([
 
       //var sHeaderTitle = arg.headerTitle;
       //var sSubHeaderTitle = arg.subHeaderTitle;
-      var oChart = this.byId("idChart");
+      // var oChart = this.byId("idChart");
     	//oChart.setHeaderTitle(sHeaderTitle);
     	//oChart.setSubheaderTitle(sSubHeaderTitle);
 
