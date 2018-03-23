@@ -54,16 +54,12 @@ sap.ui.define([
       };
 
 
-      /*
       var sHeaderTitle = arg.headerTitle;
       var sSubHeaderTitle = arg.subHeaderTitle;
       var oChart = this.byId("idChart");
-      */
-      /*
       oChart.setHeaderTitle("");
       oChart.setSubheaderTitle("");
       this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
-      */
 
       /*
       oChart.setHeaderTitle("");
