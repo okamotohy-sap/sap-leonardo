@@ -57,12 +57,11 @@ sap.ui.define([
       var sHeaderTitle = arg.headerTitle;
       var sSubHeaderTitle = arg.subHeaderTitle;
       var oChart = this.byId("idChart");
+      /*
       oChart.setHeaderTitle("");
       oChart.setSubheaderTitle("");
-      /*
       this.aPath = oEvent.getParameter("arguments").mpPath.split(".");
       */
-      /*
       oChart.setHeaderTitle("");
       oChart.setSubheaderTitle("");
       oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
@@ -70,6 +69,7 @@ sap.ui.define([
       oChart.bReload = true;
       oChart.bNavFromMeasuredValue = true;
       oChart.bNavFromEventList = false;
+      /*
       this._renderChart(oChart, this.sThingId);
       /*
       //this._renderChart();
