@@ -30,6 +30,7 @@ sap.ui.define([
       /* これをいれるとThingPageに進まなくなる。
       sap.ui.getCore().byId("idBusy").close();
       */
+      sap.ui.getCore().byId("idBusy").close();
       var arg = oEvent.getParameter("arguments");
 
       this.sThingId = arg.thingId;
