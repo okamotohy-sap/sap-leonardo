@@ -75,12 +75,13 @@ sap.ui.define([
       //ここからはチャートの上にイベントを表示する。
 
       //ここまではうまく行った
+      /*
       var oModel = sap.ui.getCore().getModel("measuredValueModel");
       var oMpContext = oEvent.getParameter("context");
       oModel.setProperty("/mpData", oMpContext);
-
+      */
       this.eventsContext = sap.ui.getCore().getModel("eventsModel") && sap.ui.getCore().getModel("eventsModel").getData().eventsData;
-      
+
       /*
       var oEventContext = oEvent.getParameter("event");
       var oModel3 = this.getView().getModel("thingPageModel");
