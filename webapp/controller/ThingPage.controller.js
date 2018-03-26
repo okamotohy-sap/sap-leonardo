@@ -73,6 +73,8 @@ sap.ui.define([
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
 
+      oChart.setAssetId(sThingId, true);
+
       // var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
 
       //ここまではチャートを表示するためのコード。
