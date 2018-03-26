@@ -66,13 +66,14 @@ sap.ui.define([
       oChart.setSubheaderTitle("");
       oChart.addDefaultPST("TI_SensorTag_CAPPABILITY", "sensorAccX");
       oChart.bChartInit = true;
-      oChart.bReload = true;
+      oChart.bReload = false;
       oChart.bNavFromMeasuredValue = true;
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
 
       //ここまではうまく行った
 
+      /*
       var oEventContext = oEvent.getParameter("event");
       var oModel3 = this.getView().getModel("thingPageModel");
       oModel3.setProperty("/eventsData", oEventContext);
@@ -85,7 +86,7 @@ sap.ui.define([
       var eventsArr = [];
       //この下の部分がうまくいかない。
       var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
-
+      */
       /*
       eventsArr.push(oData);
       oChart.getModel("chartModel").setData(eventsArr);
@@ -334,6 +335,8 @@ sap.ui.define([
     if (!this.bRenderChart) {
       oChart.setEventsVisible(false);
       oChart.setAssetId(sThingId);
+       //the chart is not getting rendered ,hence we rerender it
+      this.oChart.rerender();
     }
   },
 
