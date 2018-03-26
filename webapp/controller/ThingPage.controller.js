@@ -73,7 +73,7 @@ sap.ui.define([
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
 
-      var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
+      // var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
 
       //ここまではチャートを表示するためのコード。
       //ここからはチャートの上にイベントを表示する。
