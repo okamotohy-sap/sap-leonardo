@@ -71,7 +71,13 @@ sap.ui.define([
       oChart.bNavFromEventList = false;
       this._renderChart(oChart, this.sThingId);
 
+      //ここまではチャートを表示するためのコード。
+      //ここからはチャートの上にイベントを表示する。
+
       //ここまではうまく行った
+      var oModel = sap.ui.getCore().getModel("measuredValueModel");
+      var oMpContext = oEvent.getParameter("context");
+      oModel.setProperty("/mpData", oMpContext);
 
       /*
       var oEventContext = oEvent.getParameter("event");
@@ -81,7 +87,8 @@ sap.ui.define([
       this.eventsContext = sap.ui.getCore().getModel("eventsModel") && sap.ui.getCore().getModel("eventsModel").getData().eventsData;
       //this._renderEventsOnChart(oChart, this.eventsContext);
       // this._renderEventsOnChart(oChart, this.eventsContext);
-
+      */
+      /*
       oChart.setEventsVisible(true);
       var eventsArr = [];
       //この下の部分がうまくいかない。
