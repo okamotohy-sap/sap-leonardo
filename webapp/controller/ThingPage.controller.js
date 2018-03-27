@@ -74,7 +74,7 @@ sap.ui.define([
       // this._renderChart(oChart, this.sThingId);
 
       oChart.setAssetId(this.sThingId, true);
-      this.oChart.rerender();
+      oChart.rerender();
 
       // var oData = this.eventsContext.getModel().getProperty(this.eventsContext.getPath()); //Set this to the this context so that it can be accessible everywhere
 
