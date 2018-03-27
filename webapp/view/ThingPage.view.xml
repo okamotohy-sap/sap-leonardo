@@ -17,7 +17,7 @@
 
   <Page title="Page" enableScrolling="false">
     <content>
-      <Text text="{thingPageModel>/detailsData/ThingName}" />
+      <!--<Text text="{thingPageModel>/detailsData/ThingName}" />-->
       <Text text="{thingPageModel>/detailsData/thingId}" />
       <!--<Text text="{thingPageModel>/detailsData}" />-->
       <iot:IoTChart id="idChart" noOfHours="168" isSliderVisible="true"/>
