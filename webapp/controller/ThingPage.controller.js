@@ -282,11 +282,11 @@ sap.ui.define([
         var oThingImage = that.byId("idHeaderImage");
         oThingImage.attachError(that.onImageLoadError, that);
         oThingImage.setSrc("/backend-image/things/" + that.sThingId);
-        sap.ui.getCore().byId("idBusy").close();
+        // sap.ui.getCore().byId("idBusy").close();
       },
       error: function(oError) {
         jQuery.sap.log.error(oError);
-        sap.ui.getCore().byId("idBusy").close();
+        // sap.ui.getCore().byId("idBusy").close();
       }
     });
   },
