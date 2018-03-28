@@ -12,10 +12,10 @@ sap.ui.define([
 			var oThingObject = oEvent.getParameter("context").getParameters("thing").thingData;
 			this.getOwnerComponent().getRouter().navTo("thingpage", {
 				thingId: oThingObject.ThingId,
-				thingType: oThingObject.ThingType,
-				highSeverity: oThingObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.High || 0,
-				mediumSeverity: oThingObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.Medium || 0,
-				lowSeverity: oThingObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.Low || 0
+				thingType: oThingObject.ThingType
+				// highSeverity: oThingObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.High || 0,
+				// mediumSeverity: oThingObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.Medium || 0,
+				// lowSeverity: oThingObject.DYN_ENT_com_sap_appiot_eventtypes__StandardEventType.Low || 0
 			});
 		},
 
