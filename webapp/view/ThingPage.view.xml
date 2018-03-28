@@ -16,12 +16,14 @@
   displayBlock="true">
 
   <Page title="Page" enableScrolling="false">
-    <content>
+    <VBox>
+    <!-- <content> -->
       <Text text="{thingPageModel>/detailsData/thingId}" />
       <Text text="{thingPageModel>/detailsData/ThingName}" />
       <Text text="{thingPageModel>/detailsData/ThingExternalId}" />
       <iot:IoTChart id="idChart" noOfHours="168" isSliderVisible="true"/>
       <!--<iot:IoTChart id="idChart" noOfHours="24" isSliderVisible="true"/>-->
-    </content>
+    </VBox>
+    <!-- </content> -->
   </Page>
 </mvc:View>
